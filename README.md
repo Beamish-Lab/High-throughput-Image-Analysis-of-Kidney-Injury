@@ -11,8 +11,13 @@ This site also contains macros specic for ImageJ Fiji and QuPath programming to 
 To use the following site, please download publicly available macros and protocols for your own research needs. Both the protocols and macros are placed within designated folders. Other files that help guide processing are included within the main page. 
 
 The order processing is:
+
       1: Pre-Processing
+      
       2: Setting Up AWS Instance
+      
       3: Training
+      
       4: Validation
+      
       5: Analysis
