@@ -8,4 +8,11 @@ Once the training and validation of an immunofluorescence stain is completed, U-
 
 This site also contains macros specic for ImageJ Fiji and QuPath programming to assist in processing. Protocols outline when, where, and how to use. 
 
-To use the following site, please download publicly available macros and protocols for your own research needs. 
+To use the following site, please download publicly available macros and protocols for your own research needs. Both the protocols and macros are placed within designated folders. Other files that help guide processing are included within the main page. 
+
+The order processing is:
+      1: Pre-Processing
+      2: Setting Up AWS Instance
+      3: Training
+      4: Validation
+      5: Analysis
