@@ -8,11 +8,9 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 
 **3) QuPath\* scripts**. These scripts are used to automate transferring image and annotation data between QuPath and Fiji as described in the protocols. Note: these scripts are best downloaded together and stored in the script directory indicated in QuPath, (Automate--\>Shared scripts...--\>Set script directory...)
 
-**4) Links** to this [Publically accessible Dropbox url](https://www.dropbox.com/sh/5exs7womm3l0466/AACiRo31HIvzROJ9TIdIG4naa?dl=0) that contains:
+**4) A link to U-Net models**. Files can be downloaded [HERE](https://www.dropbox.com/sh/5exs7womm3l0466/AACiRo31HIvzROJ9TIdIG4naa?dl=0):
 
-1.  U-Net model and weight files
-
-2.  Example project files for Preprocessing and all three processing domains (Training, Validation, Analysis)
+**5) A link to example project files for Preprocessing, Training, Validation, and Analysis**. Files can be downloaded [HERE](https://www.dropbox.com/sh/5exs7womm3l0466/AACiRo31HIvzROJ9TIdIG4naa?dl=0):
 
 ![](images/Overview%20Map.jpg){width="642"}
 
