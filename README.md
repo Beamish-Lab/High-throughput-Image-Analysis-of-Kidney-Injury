@@ -14,4 +14,17 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 
 ![](images/Overview%20Map.jpg){width="642"}
 
+## [**Protocol descriptions:**]{.underline}
+
+**Preprocessing**: This protocol describes how to extract individual sections from multi-section, multi-channel whole slide scans (\*.qptiff files) and split them into single channel images for downstream processing. This will take a several gigabyte-sized files and break them into smaller files that can be easily handled in subsequent steps by most computers. This protocol is a precursor to the "Training", "Validation", and "Analysis" protocols.
+
+**Training**: This protocol outlines how to prepare a set of U-Net compatible training images for a single stain and then use these images to train a new U-Net model.
+
+**Validation**: This protocol describes how to validate the accuracy of U-Net model, created in "Training" above.
+
+**Analysis**: This protocol creates cortex outlines of whole kidney sections and batch-segments images using U-Net. The U-net segmentations are then analyzed within the cortex outline to calculate useful metrics including segmentation area and count. This protocol requires trained, validated U-net models and assumes that the "Preprocessing" protocol has been completed.
+
+**Setting up a remote AWS instance for U-Net segmentation**: This protocol describes how to set up a remote computer (called an "Instance") that is equipped with a GPU and processing tools to efficiently perform U-Net training and segmentations used in other aspects of protocols "Training", "Validation", and "Analysis."
+
+**REFERENCE:**
 \*Bankhead, P. et al. **QuPath: Open source software for digital pathology image analysis**. *Scientific Reports* (2017). <https://doi.org/10.1038/s41598-017-17204-5>
