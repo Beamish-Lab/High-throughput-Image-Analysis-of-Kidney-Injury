@@ -27,4 +27,5 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 **Setting up a remote AWS instance for U-Net segmentation**: This protocol describes how to set up a remote computer (called an "Instance") that is equipped with a GPU and processing tools to efficiently perform U-Net training and segmentations used in other aspects of protocols "Training", "Validation", and "Analysis."
 
 **REFERENCE:**
+
 \*Bankhead, P. et al. **QuPath: Open source software for digital pathology image analysis**. *Scientific Reports* (2017). <https://doi.org/10.1038/s41598-017-17204-5>
