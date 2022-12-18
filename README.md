@@ -14,7 +14,7 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 
 ![](images/Overview%20Map.jpg)
 
-## [**Protocol descriptions:**]
+## **Protocol descriptions:**
 
 **Preprocessing**: This protocol describes how to extract individual sections from multi-section, multi-channel whole slide scans (\*.qptiff files) and split them into single channel images for downstream processing. This will take a several gigabyte-sized files and break them into smaller files that can be easily handled in subsequent steps by most computers. This protocol is a precursor to the "Training", "Validation", and "Analysis" protocols.
 
