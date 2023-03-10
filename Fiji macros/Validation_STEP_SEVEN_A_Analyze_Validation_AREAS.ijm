@@ -194,7 +194,7 @@ for(aa=0;aa<number_of_files;aa++) {
 	Table.setColumn("NPV", NPV);
 	Table.setColumn("dice_score", dice_score);
 
-	Table.save(output_path + table_name);
+	Table.save(output_directory + table_name);
 	selectWindow(table_name);
 	run("Close");
 }
