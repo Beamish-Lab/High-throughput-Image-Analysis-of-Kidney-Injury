@@ -58,6 +58,8 @@ output_directory = Dialog.getString();
 C1_name = Dialog.getString();
 min_C1_area = Dialog.getNumber();
 
+C1_directory = CheckForSegmentationFolder(C1_directory);
+
 //check the files
 IsOK = CompareDirectories(C1_directory,section_outline_directory);
 if(IsOK!=0){
@@ -79,6 +81,8 @@ C1_count = newArray(number_of_files);
 filtered_C1_area = newArray(number_of_files);
 unfiltered_area_fraction = newArray(number_of_files);
 filtered_area_fraction = newArray(number_of_files);
+percent_area = newArray(number_of_files);
+
 
 //analyze the files
 for (aa=0; aa<number_of_files; aa++) {
@@ -91,45 +95,32 @@ for (aa=0; aa<number_of_files; aa++) {
 
 	current_outline=outlines_to_process[aa];
 
-	//open the current file
+//open the current file
 	open(C1_directory+current_file);
 	C1_file_window_name = getTitle();
 	
-	//delete any detections outside of the section outline
+	//open the section outline
 	roiManager("Open",section_outline_directory+current_outline);
-	setBackgroundColor(0, 0, 0);
-	selectWindow(C1_file_window_name);
-	roiManager("Select", 0);
-	run("Clear Outside");
 	
 	//make binary
+	selectWindow(C1_file_window_name);
 	setThreshold(1, 255);
 	setOption("BlackBackground", false);
 	run("Convert to Mask");
 	
-	//find the total area of the ROI
+	//find the total area of the ROI and the area of the segmentation
 	roiManager("Select", 0);
 	run("Measure");
 	selectWindow("Results");
 	total_area[aa]= Table.get("Area",0);
+	percent_area[aa]= Table.get("%Area",0);
+	unfiltered_C1_area[aa] = total_area[aa] * (percent_area[aa]/100);
 	
 	//clean up
 	run("Clear Results");
 	roiManager("Deselect");  
-	roiManager("Delete")
+	roiManager("Delete");
 	
-	//measure the total area of the segmentations only (regardless of size)
-	run("Create Selection");
-	roiManager("Add");
-	roiManager("Select", 0);	
-	run("Measure");
-	unfiltered_C1_area[aa] = Table.get("Area",0);
-	
-	//clean up
-	run("Clear Results");
-	roiManager("Deselect");  
-	roiManager("Delete")		
-					
 	//measure the area and count of the segmentations only that meet the size requirements
 	roiManager("Open",section_outline_directory+current_outline);
 	roiManager("Select", 0);
@@ -234,4 +225,19 @@ function Make_Time_Stamp () {
 	if (minute<10) {time_stamp_output = time_stamp_output+"0";}
 	time_stamp_output = time_stamp_output+minute;
 	return time_stamp_output;
+}
+
+function CheckForSegmentationFolder(directory) {
+	//returns the base directory if there is no segmentation directory or the segmentation path if there is one
+	directory_file_list=getFileList(directory+"Segmentation\\"); 
+	n_file_list = directory_file_list.length;
+	
+	//if there is not a Segmentation folder, then the number of files will be 0, in which case, count the files in the original directory
+	if(n_file_list==0){
+		return directory;
+	} else {
+		return directory + "Segmentation\\";
+	}
+
+	
 }
