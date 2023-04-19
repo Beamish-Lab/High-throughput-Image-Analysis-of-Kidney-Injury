@@ -56,7 +56,7 @@ for (i = 0; i < n_channels; i++) {
 files_to_process=getFileList(source_directory); //make a list of the files that need to be processed
 number_of_files=files_to_process.length;
 
-//import keys to convert the input images from slide labels (e.g. "KK_IRI_Middle.tif") to decrypted file root name (e.g."P28P_TR_M_3933_IRI_") 
+//import keys to convert the input images from slide labels (e.g. "KK_IRI_Middle.ome.tif") to decrypted file root name (e.g."P28P_TR_M_3933_IRI_") 
 run("Table... ", "open=["+key_file+"]");
 input_filename_key = Table.getColumn("Input File Name");
 output_filename_root_key = Table.getColumn("Output File Root");
