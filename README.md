@@ -1,5 +1,7 @@
 # High-throughput Image Analysis of Kidney Injury
 
+The following procedures, codes, and examples are described in detail in the associated reference: McElliott MC, Al-Suraimi A, Telang AC, Ference-Salo JT, Chowdhury M, Soofi A, Dressler GR, Beamish JA. High-throughput image analysis with deep learning captures heterogeneity and spatial relationships after kidney injury. Sci Rep. 2023 Apr 19;13(1):6361. PubMed PMID: 37076596; PubMed Central PMCID: PMC10115810
+
 The following project outlines the tools needed for U-Net assisted segmentation and analysis of kidney injury in immunofluorescence-stained whole kidney sections. Processing has three main domains: Training, Validation, and Analysis. This site provides:
 
 **1) Detailed protocols for each domain,** including Training, Validation, and Analysis. We also include a detailed protocol for Preprocessing, which is necessary to extract single-channel, whole-section images from large, multi-channel, whole-slide \*.qptiff scan files. Detailed instructions for setting up an AWS instance, needed to perform segmentation, are also provided. Brief descriptions of each protocol follow.
@@ -27,5 +29,7 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 **Setting up a remote AWS instance for U-Net segmentation**: This protocol describes how to set up a remote computer (called an "Instance") that is equipped with a GPU and processing tools to efficiently perform U-Net training and segmentations used in other aspects of protocols "Training", "Validation", and "Analysis."
 
 **REFERENCE:**
+
+\ McElliott MC, Al-Suraimi A, Telang AC, Ference-Salo JT, Chowdhury M, Soofi A, Dressler GR, Beamish JA. High-throughput image analysis with deep learning captures heterogeneity and spatial relationships after kidney injury. Sci Rep. 2023 Apr 19;13(1):6361. PubMed PMID: 37076596; PubMed Central PMCID: PMC10115810
 
 \**Bankhead, P. et al. **QuPath: Open source software for digital pathology image analysis**.* Scientific Reports\* (2017). <https://doi.org/10.1038/s41598-017-17204-5>
