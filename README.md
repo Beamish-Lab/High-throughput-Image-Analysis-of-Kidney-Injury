@@ -30,6 +30,6 @@ The following project outlines the tools needed for U-Net assisted segmentation 
 
 **REFERENCE:**
 
-\**McElliott MC, Al-Suraimi A, Telang AC, Ference-Salo JT, Chowdhury M, Soofi A, Dressler GR, Beamish JA. **High-throughput image analysis with deep learning captures heterogeneity and spatial relationships after kidney injury**. Sci Rep. 2023 Apr 19;13(1):6361. PubMed PMID: 37076596; PubMed Central PMCID: PMC10115810
-
 \**Bankhead, P. et al. **QuPath: Open source software for digital pathology image analysis**.* Scientific Reports\* (2017). <https://doi.org/10.1038/s41598-017-17204-5>
+
+\**McElliott MC, Al-Suraimi A, Telang AC, Ference-Salo JT, Chowdhury M, Soofi A, Dressler GR, Beamish JA. **High-throughput image analysis with deep learning captures heterogeneity and spatial relationships after kidney injury**. Sci Rep. 2023 Apr 19;13(1):6361. PubMed PMID: 37076596; PubMed Central PMCID: PMC10115810
