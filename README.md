@@ -1,4 +1,4 @@
-# High-throughput Image Analysis of Kidney Injury
+# High-throughput Image Analysis of Kidney Injury **
 
 The following procedures, codes, and examples are described in detail in the associated reference: McElliott MC, Al-Suraimi A, Telang AC, Ference-Salo JT, Chowdhury M, Soofi A, Dressler GR, Beamish JA. High-throughput image analysis with deep learning captures heterogeneity and spatial relationships after kidney injury. Sci Rep. 2023 Apr 19;13(1):6361. PubMed PMID: 37076596; PubMed Central PMCID: PMC10115810
 
